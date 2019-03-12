@@ -1,9 +1,13 @@
 <template>
-  <div class="pokedex-list">
+  <div class="main">
+    <div class="title"><h1> Aqui tienes tus pokemon iniciales </h1> </div>
+    <div class="pokedex-list">
       <div class="pokemon-item" v-for="pokemon in pokedexList" :key="pokemon.numero">
           <PokemonCard :pokemon="pokemon"/>
       </div>
   </div>
+  </div>
+  
 </template>
 
 <script>
@@ -17,7 +21,10 @@ export default {
     PokemonCard
   },
   computed: {
-    ...mapGetters({pokedexList: 'pokedex'})
+    ...mapGetters({pokedexList: 'pokedex', allPokemonList: 'allPokemon'})
+  },
+  created() {
+    this.$store.dispatch('allListPokemon')
   },
   data () {
     return {}
@@ -28,6 +35,12 @@ export default {
 </script>
 
 <style scoped>
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
 .pokedex-list {
   display: flex;
   justify-content: center;
