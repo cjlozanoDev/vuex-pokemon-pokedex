@@ -4,7 +4,10 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  pokedex: [{name: 'bulbasaur', numero: 1}, {name: 'charmander', numero: 4}, {name: 'squirtle', numero: 7}]
+  pokedex: [
+    {name: 'bulbasaur', number: 1, image: 'https://github.com/devcjlozano/pokeApi/blob/master/sprites/other-sprites/official-artwork/1.png?raw=true'},
+    {name: 'charmander', number: 4, image: 'https://github.com/devcjlozano/pokeApi/blob/master/sprites/other-sprites/official-artwork/4.png?raw=true'},
+    {name: 'squirtle', number: 7, image: 'https://github.com/devcjlozano/pokeApi/blob/master/sprites/other-sprites/official-artwork/7.png?raw=true'}]
 }
 
 const mutations = {
