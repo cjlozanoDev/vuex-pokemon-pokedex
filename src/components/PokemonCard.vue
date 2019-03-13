@@ -5,13 +5,26 @@
             <v-img
             :src="pokemon.image"
             aspect-ratio="1"
-            ></v-img>
+            >
+            <template v-slot:placeholder>
+                <v-layout
+                    fill-height
+                    align-center
+                    justify-center
+                    ma-0
+                >
+                    <v-progress-circular indeterminate color="red lighten-2"></v-progress-circular>
+                </v-layout>
+            </template>
+            </v-img>
 
             <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0">{{pokemon.name}}</h3>
-            </div>
+
+                    <h3># {{pokemon.number}}</h3>
+                    <h3 class="headline mb-0">{{pokemon.name}}</h3>
+
             </v-card-title>
+
         </v-card>
     </div>
   </div>
@@ -33,5 +46,12 @@ export default {
 </script>
 
 <style scoped>
+div /deep/ .v-card__title{
+    align-items:  center;
+    flex-direction: column;
+    background-color: hsl(0, 79%, 72%);
+    opacity: 0.9;
+    color: white;
 
+}
 </style>
