@@ -1,21 +1,23 @@
 <template>
   <div class="pokedex-container">
-   <h1> HOla desde pokedex </h1>
+    <PokemonList/>
   </div>
 </template>
 
 <script>
 
+import PokemonList from './PokemonList'
 
 export default {
   name: 'pokedexContainer',
   components: {
+    PokemonList
   },
   data () {
     return {}
   },
   methods: {}
-  }
+}
 
 </script>
 
