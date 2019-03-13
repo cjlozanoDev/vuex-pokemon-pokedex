@@ -19,12 +19,12 @@
             </v-img>
 
             <v-card-title primary-title>
-                
+
                     <h3># {{pokemon.number}}</h3>
                     <h3 class="headline mb-0">{{pokemon.name}}</h3>
-                
+
             </v-card-title>
-            
+
         </v-card>
     </div>
   </div>
@@ -49,6 +49,9 @@ export default {
 div /deep/ .v-card__title{
     align-items:  center;
     flex-direction: column;
+    background-color: hsl(0, 79%, 72%);
+    opacity: 0.9;
+    color: white;
 
 }
 </style>

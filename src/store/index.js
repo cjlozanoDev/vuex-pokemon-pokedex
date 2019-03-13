@@ -13,7 +13,7 @@ const state = {
 }
 
 const mutations = {
-  ADD_POKEMON (state, { pokemon }) {
+  ADD_POKEMON (state, pokemon) {
     state.pokedex.push(pokemon)
   },
   ADD_ALL_POKEMON (state, {listPokemon}) {
