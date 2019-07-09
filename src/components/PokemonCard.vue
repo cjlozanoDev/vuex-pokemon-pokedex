@@ -20,8 +20,8 @@
 
             <v-card-title primary-title>
 
-                    <h3># {{pokemon.number}}</h3>
-                    <h3 class="headline mb-0">{{pokemon.name}}</h3>
+                    <span class="pokemon-number"># {{pokemon.number}}</span>
+                    <span class="pokemon-name">{{pokemon.name}}</span>
 
             </v-card-title>
 
@@ -29,7 +29,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'pokedexCard',
@@ -52,6 +51,20 @@ div /deep/ .v-card__title{
     background-color: hsl(0, 79%, 72%);
     opacity: 0.9;
     color: white;
+}
+.pokemon-number {
+  font-size: 20px;
+}
+.pokemon-name {
+  font-size: 15px;
+}
 
+@media (min-width: 480px) {
+   .pokemon.number {
+     font-size: 25px;
+   }
+   .pokemon-name {
+     font-size: 22px;
+   }
 }
 </style>
