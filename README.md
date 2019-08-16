@@ -1,6 +1,6 @@
 # vuex-pokemon-pokedex
 
-> A Vue.js project
+> Vuex y llamada a la pokeApi para seleccionar el pokemon encontrado. FrameWork de diseño Vuetify
 
 ## Build Setup
 
